@@ -28,4 +28,6 @@ const createRestuflFunction = (args: IRestfulFunctionArgs) => {
   });
 };
 
+export const myCensorshipList = [{ censored: ["one", "two", "three", "four"] }];
+
 export default createRestuflFunction;

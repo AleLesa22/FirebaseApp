@@ -9,9 +9,35 @@ const createToComment = createRestuflFunction({
     try {
       const body: ICreateToCommentRequest = req.body;
 
+      let stringSplit = body.Description;
+      let splitted = stringSplit.split(" ");
+      let arrayOfWordsToCensor = new Array();
+
+      for (const element of splitted) {
+        arrayOfWordsToCensor.push(element);
+      }
+
+      let NewComment: string = "";
+      let myChecker: string[] = ["one", "two", "three", "four"];
+
+      for (let i = 0; i < arrayOfWordsToCensor.length; i++) {
+        let temp = arrayOfWordsToCensor[i];
+        for (const element of myChecker) {
+          if (arrayOfWordsToCensor[i] === element) {
+            temp = "*".repeat(element.length);
+            break;
+          }
+        }
+        if (i === arrayOfWordsToCensor.length - 1) {
+          NewComment += temp;
+        } else {
+          NewComment += temp + " ";
+        }
+      }
+
       const comment = createToCommentRequest({
         Title: body.Title,
-        Description: body.Description,
+        Description: NewComment,
         User: body.User,
         Grade: body.Grade,
       });

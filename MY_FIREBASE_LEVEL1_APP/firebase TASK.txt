@@ -1,0 +1,75 @@
+DOMACI FIREBASE
+
+CRUD za komentare/
+Napraviti komentar/editovati komentar/
+Obrisati komentar/ 
+Dobiti sve komentare/
+Imati reaktivnu funkciju koja ce iz komentara da uklanja neke reci koje su zabranjene
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Config:
+// importuj sve iz baze kao admin (podrazumeva da imamo bazu u firebase-u)
+//kreiramo promenljivu serviceAccount koja ce poziva metodu require koja u sustini radi isto kao i import
+//sa adminom pozovi initializeApp funkciju koja u sustini radi login
+//veza sa bazom
+//eksport baze
+
+|ToDos|
+
+Models:
+//interfejs IToDo koji sadrzi polja: { title,desc,date,isDone } + uradi export
+//interfejs ICreateToDoRequest koji sadrzi polja {title,desc} + uradi export
+
+
+|| Restful: || 
+
+ CreateToDo:
+//importuj bazu,helper,todorequest i createrequest
+//pravimo createToDo promenljivu koja u sebi poziva funkciju createRestfulFunction
+//definisemo promenljivu method tipa MethodEnum.POST (kojapoziva post metodu.)
+//callback funkcija sa parametrima request,response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Utils|
+
+Helpers:
+
+//importuj modele
+
+/* promenljiva createToDoRequest je jednaka instanci objekta interfejsa ICreateToDoRequest koji je TIPA IToDo
+koji treba da vrati konstruktor objekta ! */
+
+//importuj funkcije firebase-a
+//importuj request i response funkcije firebase-a
+//napravi enum MethodEnum sa metodama GET POST PATCH DELETE
+//Napravi interfejs IRestfulFunctionArgs koji ima promenljivu method tipa MethodEnum i callback koja prima parametre request i response
+/* metoda za uspesan i neuspesan request i response */
+
+
+
+
+
+
